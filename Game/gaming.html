@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MisiDev Gaming Hub</title>
+    <link rel="stylesheet" href="gaming-styles.css">
+</head>
+<body>
+    <header>
+        <h1>MisiDev Gaming Hub</h1>
+        <nav>
+            <button id="homeBtn" class="nav-btn active">Home</button>
+            <button id="gamesBtn" class="nav-btn">Games</button>
+            <button id="highscoresBtn" class="nav-btn">High Scores</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="section active">
+            <h2>Welcome to MisiDev Gaming Hub!</h2>
+            <p>Choose from our collection of fun games and challenge yourself!</p>
+            <div class="featured-games">
+                <h3>Featured Games:</h3>
+                <ul>
+                    <li>Snake Game - Classic arcade fun!</li>
+                    <li>Tetris - The timeless puzzle game!</li>
+                    <li>More games coming soon...</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="games" class="section">
+            <h2>Available Games</h2>
+            <div class="games-grid">
+                <div class="game-card" onclick="loadGame('snake')">
+                    <h3>Snake Game</h3>
+                    <p>Classic snake game - eat food and grow longer!</p>
+                    <div class="game-info">
+                        <span class="difficulty">Easy</span>
+                        <span class="category">Arcade</span>
+                    </div>
+                </div>
+                <div class="game-card" onclick="loadGame('tetris')">
+                    <h3>Tetris</h3>
+                    <p>Arrange falling blocks to clear lines!</p>
+                    <div class="game-info">
+                        <span class="difficulty">Medium</span>
+                        <span class="category">Puzzle</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="highscores" class="section">
+            <h2>High Scores</h2>
+            <div class="scores-container">
+                <div id="snakeScores" class="game-scores">
+                    <h3>Snake Game</h3>
+                    <div class="scores-list"></div>
+                </div>
+                <div id="tetrisScores" class="game-scores">
+                    <h3>Tetris</h3>
+                    <div class="scores-list"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gameArea" class="section">
+            <button id="backBtn">← Back to Games</button>
+            <div id="currentGame"></div>
+            <div class="game-controls">
+                <h3>Controls:</h3>
+                <div id="snakeControls" class="controls-info" style="display: none;">
+                    <p>Use arrow keys to control the snake's direction</p>
+                </div>
+                <div id="tetrisControls" class="controls-info" style="display: none;">
+                    <p>← → : Move left/right</p>
+                    <p>↑ : Rotate piece</p>
+                    <p>↓ : Move down faster</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by MisiDev - Gaming Hub v1.0</p>
+        <p class="copyright">© 2024 MisiDev. All rights reserved.</p>
+    </footer>
+
+    <script src="games/tetris.js"></script>
+    <script src="gaming-app.js"></script>
+</body>
+</html>
